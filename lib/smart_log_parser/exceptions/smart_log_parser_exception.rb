@@ -1,2 +1,4 @@
-class SmartLogParserException < StandardError
+module SmartLogParser
+  class SmartLogParserException < StandardError
+  end
 end
