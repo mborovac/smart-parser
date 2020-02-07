@@ -8,6 +8,10 @@ module SmartLogParser
       unless File.exists?(@log_file)
         raise SmartLogParserException.new "File #{@log_file} does not exist."
       end
+
+      File.foreach(@log_file) do |line|
+        yield line.split(' ')
+      end
     end
   end
 end
