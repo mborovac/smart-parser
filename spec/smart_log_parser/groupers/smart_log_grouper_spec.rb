@@ -10,6 +10,7 @@ RSpec.describe 'smart log grouper' do
       expect{ SmartLogParser::SmartLogGrouper.new(Class.new) }.to raise_exception(SmartLogParser::SmartLogParserException, 'Reader must respond to method read_lines!')
     end
   end
+
   describe 'as an interface-like class' do
     it 'has no implementation for "group" instance method' do
       file_path = 'spec/webserver_spec.log'
