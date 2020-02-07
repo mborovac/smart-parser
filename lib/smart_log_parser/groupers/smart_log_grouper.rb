@@ -6,6 +6,8 @@ module SmartLogParser
     include SmartLogParser::InterfaceHelper
 
     def initialize(reader)
+      raise SmartLogParser::SmartLogParserException.new 'Reader must exist!' if reader.nil?
+      raise SmartLogParser::SmartLogParserException.new 'Reader must respond to method read_lines!' unless reader.class.method_defined?(:read_lines)
       @reader = reader
     end
 
