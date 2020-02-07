@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe 'unique page access count grouper' do
   it 'should extend smart_log_grouper' do
-    expect(SmartLogParser::UniquePageAccessCountGrouper < SmartLogParser::SmartLogGrouper)
+    expect(SmartLogParser::UniquePageAccessCountGrouper < SmartLogParser::SmartLogGrouper).to be true
   end
 
   it 'should group unique visits by page and count them' do

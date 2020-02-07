@@ -1,7 +1,7 @@
 require_relative 'smart_log_grouper'
 
 module SmartLogParser
-  class UniquePageAccessCountGrouper < SmartLogParser::SmartLogGrouper
+  class UniquePageAccessCountGrouper < SmartLogGrouper
     def group
       user_page_access_count = Hash.new(0)
       unique_page_access_count = Hash.new(0)

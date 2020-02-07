@@ -6,3 +6,5 @@ require_relative '../lib/smart_log_parser/groupers/unique_page_access_count_grou
 require_relative '../lib/smart_log_parser/helpers/interface_helper'
 require_relative '../lib/smart_log_parser/io/line_by_line_reader'
 require_relative '../lib/smart_log_parser/orderers/smart_log_orderer'
+require_relative '../lib/smart_log_parser/orderers/ascending_orderer'
+require_relative '../lib/smart_log_parser/orderers/descending_orderer'
