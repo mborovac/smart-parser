@@ -1,0 +1,2 @@
+class SmartLogParserException < StandardError
+end
