@@ -1,5 +1,4 @@
-require_relative '../../../lib/smart_log_parser/exceptions/smart_log_parser_exception'
-require_relative '../../../lib/smart_log_parser/groupers/smart_log_grouper'
+require 'spec_helper'
 
 RSpec.describe 'smart log grouper' do
   describe 'initialize' do

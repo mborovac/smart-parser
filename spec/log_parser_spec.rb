@@ -1,5 +1,4 @@
-require_relative '../lib/smart_log_parser/exceptions/smart_log_parser_exception'
-require_relative '../lib/smart_log_parser/log_parser'
+require 'spec_helper'
 
 RSpec.describe 'log parser' do
   describe 'creation' do

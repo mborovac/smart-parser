@@ -1,5 +1,4 @@
-require_relative '../../../lib/smart_log_parser/exceptions/smart_log_parser_exception'
-require_relative '../../../lib/smart_log_parser/io/line_by_line_reader'
+require 'spec_helper'
 
 RSpec.describe 'line by line reader' do
   describe 'read lines' do

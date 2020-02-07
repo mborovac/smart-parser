@@ -1,5 +1,4 @@
-require_relative '../../../lib/smart_log_parser/exceptions/smart_log_parser_exception'
-require_relative '../../../lib/smart_log_parser/helpers/interface_helper'
+require 'spec_helper'
 
 RSpec.describe 'interface helper' do
   include SmartLogParser::InterfaceHelper
