@@ -6,5 +6,8 @@ module SmartLogParser
       end
       @log_file = log_file
     end
+
+    def parse(description, follower_text, ordering_description)
+    end
   end
 end
