@@ -1,6 +1,7 @@
 require_relative '../lib/smart_log_parser/log_parser'
 require_relative '../lib/smart_log_parser/exceptions/smart_log_parser_exception'
 require_relative '../lib/smart_log_parser/groupers/smart_log_grouper'
+require_relative '../lib/smart_log_parser/groupers/grouper_factory'
 require_relative '../lib/smart_log_parser/groupers/page_access_count_grouper'
 require_relative '../lib/smart_log_parser/groupers/unique_page_access_count_grouper'
 require_relative '../lib/smart_log_parser/helpers/interface_helper'
