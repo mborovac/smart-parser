@@ -8,6 +8,10 @@ module SmartLogParser
     }
 
     def create_orderer(data, order)
+      order = order.to_sym
+      raise SmartLogParserException.new("Unknown ordering option #{order}.") unless ORDERER_MAPPER.keys.include?(order)
+
+      ORDERER_MAPPER[order].new(data)
     end
   end
 end
