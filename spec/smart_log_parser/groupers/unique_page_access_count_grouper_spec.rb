@@ -5,7 +5,7 @@ RSpec.describe 'unique page access count grouper' do
     expect(SmartLogParser::UniquePageAccessCountGrouper < SmartLogParser::SmartLogGrouper).to be true
   end
 
-  it 'should group unique visits by page and count them' do
+  it 'should group visits by page and count unique ones' do
     file_path = 'spec/webserver_spec.log'
     reader = SmartLogParser::LineByLineReader.new(file_path)
     grouper = SmartLogParser::UniquePageAccessCountGrouper.new(reader)

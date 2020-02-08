@@ -4,7 +4,8 @@ module SmartLogParser
   class GrouperFactory
     GROUPER_MAPPER = {
       PAC: PageAccessCountGrouper,
-      UPAC: UniquePageAccessCountGrouper
+      UPAC: UniquePageAccessCountGrouper,
+      UVC: SmartLogParser::UserVisitsCountGrouper
     }
 
     def initialize(reader)
