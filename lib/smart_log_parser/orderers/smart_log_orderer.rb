@@ -11,7 +11,7 @@ module SmartLogParser
     end
 
     def order
-      not_implemented_error(self.class.name, __callee__)
+      self.not_implemented_error(self.class.name, __callee__)
     end
   end
 end

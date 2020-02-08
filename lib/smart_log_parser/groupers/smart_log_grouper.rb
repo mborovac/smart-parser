@@ -12,13 +12,15 @@ module SmartLogParser
     end
 
     def group
-      not_implemented_error(self.class.name, __callee__)
+      self.not_implemented_error(self.class.name, __callee__)
     end
 
     def self.description
+      not_implemented_error(self.name, __callee__)
     end
 
     def self.follower_text
+      not_implemented_error(self.name, __callee__)
     end
   end
 end

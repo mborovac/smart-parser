@@ -13,9 +13,11 @@ module SmartLogParser
     end
 
     def self.description
+      'List of webpage views'
     end
 
     def self.follower_text
+      'views'
     end
   end
 end
