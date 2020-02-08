@@ -9,8 +9,10 @@ module SmartLogParser
 
     def parse(description, follower_text, ordering_description)
       reader = SmartLogParser::LineByLineReader.new(@log_file)
-      grouped_data = SmartLogParser::PageAccessCountGrouper.new(reader).group
-      ordered_data = SmartLogParser::DescendingOrderer.new(grouped_data).order
+      grouper_factory = SmartLogParser::GrouperFactory.new(reader)
+      orderer_factory = SmartLogParser::OrdererFactory.new
+      grouped_data = grouper_factory.create_grouper(:PAC).group
+      ordered_data = orderer_factory.create_orderer(grouped_data, :down).order
       SmartLogParser::LogParserPrinter.print_visits(ordered_data, description, follower_text, ordering_description)
     end
   end
