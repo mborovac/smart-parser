@@ -13,7 +13,8 @@ RSpec.describe 'log parser printer' do
     expected_output = [
       "#{description} ordered in #{ordering_description}",
       "#{data_array[0][0]} #{data_array[0][1]} #{follower_text}",
-      "#{data_array[1][0]} #{data_array[1][1]} #{follower_text}"
+      "#{data_array[1][0]} #{data_array[1][1]} #{follower_text}",
+      "#{SmartLogParser::LogParserPrinter::DELIMITER}"
     ].join("\n")
 
     expect{ SmartLogParser::LogParserPrinter.print_visits(data_array, description, follower_text, ordering_description) }.to output(expected_output + "\n").to_stdout
