@@ -1,3 +1,5 @@
+require_relative 'smart_log_orderer'
+
 module SmartLogParser
   class AscendingOrderer < SmartLogOrderer
     def order

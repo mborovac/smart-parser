@@ -1,3 +1,8 @@
+require_relative 'io/line_by_line_reader'
+require_relative 'io/log_parser_printer'
+require_relative 'groupers/grouper_factory'
+require_relative 'orderers/orderer_factory'
+
 module SmartLogParser
   class LogParser
     attr_reader :log_file, :group_and_order_array
