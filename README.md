@@ -1,7 +1,7 @@
 # SmartLogParser
 ## Setup
-This repository contains files `.ruby-version` and `.ruby-gemset` used by RVM to install the required Ruby version and set up a separate gemset for the project so there is no clashing with other projects.
-Ruby version can be checked using the `rvm list` command and gemset being used can be checked using the `rvm list gemsets` command. If the gemset being used is not the one specified in the `.ruby-gemset` file, navigate out of the folder and back into it, RVM will take care of the rest.
+This repository contains file `.ruby-version` used by RVM to install the required Ruby version. RVM also uses file `.ruby-gemset` to set up a separate gemset for the project so there is no clashing with other projects. Adding this file locally is strongly recommended. After adding it, navigate out of the current folder and back in to allow RVM to create the gemset.
+Ruby version can be checked using the `rvm list` command and gemset being used can be checked using the `rvm list gemsets` command.
 
 ## Running the script
 To start using the script first run `bundle install`.
