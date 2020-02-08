@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require_relative '../lib/smart_log_parser/log_parser'
 require_relative '../lib/smart_log_parser/exceptions/smart_log_parser_exception'
 require_relative '../lib/smart_log_parser/groupers/smart_log_grouper'

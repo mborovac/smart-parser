@@ -1,2 +1,5 @@
 #RVM
 .ruby-gemset
+
+# Ignore SimpleCov report
+coverage

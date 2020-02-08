@@ -12,3 +12,4 @@ Run `rake man:grouper_options` and `rake man:orderer_options` commands to get mo
 
 ## Testing
 Full test suite can be run using the `rspec` command, specific files can be run using the `rspec path/to/file` command, and tests at specific lines can be run using the `rspec path/to/file:line_number` command.
+Test coverage can be found in `coverage` folder of the project after running the tests for the first time.
