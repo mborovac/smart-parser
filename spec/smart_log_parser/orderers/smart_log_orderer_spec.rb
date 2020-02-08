@@ -21,5 +21,9 @@ RSpec.describe 'smart log orderer' do
 
       expect{ orderer_interface.order }.to raise_exception(SmartLogParser::SmartLogParserException, 'SmartLogParser::SmartLogOrderer method order not implemented')
     end
+
+    it 'has no implementation for "direction_text" class method' do
+      expect{ SmartLogParser::SmartLogOrderer.direction_text }.to raise_exception(SmartLogParser::SmartLogParserException, 'SmartLogParser::SmartLogOrderer method direction_text not implemented')
+    end
   end
 end

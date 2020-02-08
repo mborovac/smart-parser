@@ -13,5 +13,8 @@ module SmartLogParser
     def order
       self.not_implemented_error(self.class.name, __callee__)
     end
+
+    def self.direction_text
+    end
   end
 end

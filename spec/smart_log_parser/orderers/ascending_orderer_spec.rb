@@ -22,4 +22,10 @@ RSpec.describe 'ascending orderer' do
 
     expect(orderer.order).to eql(expected_output)
   end
+
+  it 'implements class method "direction_text"' do
+    follower_text = SmartLogParser::AscendingOrderer.direction_text
+    expect(follower_text).to be_an_instance_of String
+    expect(follower_text).not_to be_empty
+  end
 end
