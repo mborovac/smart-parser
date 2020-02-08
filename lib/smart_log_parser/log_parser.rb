@@ -21,10 +21,12 @@ module SmartLogParser
       orderer_factory = SmartLogParser::OrdererFactory.new
 
       @group_and_order_array.each do |group, order|
-        grouped_data = grouper_factory.create_grouper(group).group
-        ordered_data = orderer_factory.create_orderer(grouped_data, order).order
+        grouper = grouper_factory.create_grouper(group)
+        grouped_data = grouper.group
+        orderer = orderer_factory.create_orderer(grouped_data, order)
+        ordered_data = orderer.order
 
-        SmartLogParser::LogParserPrinter.print_visits(ordered_data, description, follower_text, ordering_description)
+        SmartLogParser::LogParserPrinter.print_visits(ordered_data, grouper.class.description, grouper.class.follower_text, orderer.class.direction_text)
       end
     end
   end
