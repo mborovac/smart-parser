@@ -1,6 +1,6 @@
 module SmartLogParser
   class LogParser
-    def initialize(log_file)
+    def initialize(log_file, group_and_order_array)
       if log_file.nil? || log_file.empty?
         raise SmartLogParser::SmartLogParserException.new "No log file given!"
       end
