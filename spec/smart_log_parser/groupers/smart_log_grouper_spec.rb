@@ -19,5 +19,13 @@ RSpec.describe 'smart log grouper' do
 
       expect{ grouper_interface.group }.to raise_exception(SmartLogParser::SmartLogParserException, 'SmartLogParser::SmartLogGrouper method group not implemented')
     end
+
+    it 'has no implementation for "description" class method' do
+      expect{ SmartLogParser::SmartLogGrouper.description }.to raise_exception(SmartLogParser::SmartLogParserException, 'SmartLogParser::SmartLogGrouper method description not implemented')
+    end
+
+    it 'has no implementation for "follower_text" class method' do
+      expect{ SmartLogParser::SmartLogGrouper.follower_text }.to raise_exception(SmartLogParser::SmartLogParserException, 'SmartLogParser::SmartLogGrouper method follower_text not implemented')
+    end
   end
 end

@@ -20,4 +20,16 @@ RSpec.describe 'page access count grouper' do
 
     expect(grouper.group).to eql(expected_result)
   end
+
+  it 'implements class method "description"' do
+    description = SmartLogParser::PageAccessCountGrouper.description
+    expect(description).to be_an_instance_of String
+    expect(description).not_to be_empty
+  end
+
+  it 'implements class method "description"' do
+    follower_text = SmartLogParser::PageAccessCountGrouper.follower_text
+    expect(follower_text).to be_an_instance_of String
+    expect(follower_text).not_to be_empty
+  end
 end
