@@ -15,6 +15,7 @@ module SmartLogParser
     end
 
     def self.direction_text
+      not_implemented_error(self.name, __callee__)
     end
   end
 end

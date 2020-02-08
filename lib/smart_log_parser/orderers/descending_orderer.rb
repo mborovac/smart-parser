@@ -5,6 +5,7 @@ module SmartLogParser
     end
 
     def self.direction_text
+      'descending order'
     end
   end
 end
