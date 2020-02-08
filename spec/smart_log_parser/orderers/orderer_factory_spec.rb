@@ -7,7 +7,7 @@ RSpec.describe 'orderer factory' do
   describe 'creating an orderer' do
     it 'throws an error if given ordering option is invalid' do
       order = 'error'
-      expect{ orderer_factory.create_orderer(data, order) }.to raise_exception(SmartLogParser::SmartLogParserException, "Unknown ordering option #{order}.")
+      expect{ orderer_factory.create_orderer(data, order) }.to raise_exception(SmartLogParser::SmartLogParserException, "Unknown ordering option #{order}. Run 'rake man:orderer_options' to get a list of all available ordering options.")
     end
   end
 

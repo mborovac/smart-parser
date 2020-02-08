@@ -13,7 +13,7 @@ module SmartLogParser
 
     def create_grouper(group)
       group = group.to_sym
-      raise SmartLogParserException.new("Unknown grouping option #{group}.") unless GROUPER_MAPPER.keys.include?(group)
+      raise SmartLogParserException.new("Unknown grouping option #{group}. Run 'rake man:grouper_options' to get a list of all available grouping options.") unless GROUPER_MAPPER.keys.include?(group)
 
       GROUPER_MAPPER[group].new(@reader)
     end

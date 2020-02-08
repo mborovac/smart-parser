@@ -9,7 +9,7 @@ module SmartLogParser
 
     def create_orderer(data, order)
       order = order.to_sym
-      raise SmartLogParserException.new("Unknown ordering option #{order}.") unless ORDERER_MAPPER.keys.include?(order)
+      raise SmartLogParserException.new("Unknown ordering option #{order}. Run 'rake man:orderer_options' to get a list of all available ordering options.") unless ORDERER_MAPPER.keys.include?(order)
 
       ORDERER_MAPPER[order].new(data)
     end

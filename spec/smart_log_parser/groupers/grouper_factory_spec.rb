@@ -7,7 +7,7 @@ RSpec.describe 'grouper factory' do
   describe 'creating a grouper' do
     it 'throws an error if given grouping option is invalid' do
       group = 'error'
-      expect{ grouper_factory.create_grouper(group) }.to raise_exception(SmartLogParser::SmartLogParserException, "Unknown grouping option #{group}.")
+      expect{ grouper_factory.create_grouper(group) }.to raise_exception(SmartLogParser::SmartLogParserException, "Unknown grouping option #{group}. Run 'rake man:grouper_options' to get a list of all available grouping options.")
     end
   end
 
