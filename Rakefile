@@ -9,7 +9,7 @@ namespace :man do
   end
 
   task :orderer_options do
-    puts "Grouper options available in SmartLogParser and their behaviour:"
+    puts "Orderer options available in SmartLogParser and their behaviour:"
     puts SmartLogParser::OrdererFactory::ORDERER_MAPPER.transform_values{|v| v.direction_text }
   end
 end

@@ -5,7 +5,8 @@ module SmartLogParser
     GROUPER_MAPPER = {
       PAC: PageAccessCountGrouper,
       UPAC: UniquePageAccessCountGrouper,
-      UVC: SmartLogParser::UserVisitsCountGrouper
+      UVC: SmartLogParser::UserVisitsCountGrouper,
+      UUVC: SmartLogParser::UniqueUserVisitsCountGrouper
     }
 
     def initialize(reader)
