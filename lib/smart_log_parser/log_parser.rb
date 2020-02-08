@@ -15,7 +15,7 @@ module SmartLogParser
       @group_and_order_array = group_and_order_array.map{|gao| gao.split(GROUP_AND_ORDER_SPLIT_CHAR)}
     end
 
-    def parse(description, follower_text, ordering_description)
+    def parse
       reader = SmartLogParser::LineByLineReader.new(@log_file)
       grouper_factory = SmartLogParser::GrouperFactory.new(reader)
       orderer_factory = SmartLogParser::OrdererFactory.new
