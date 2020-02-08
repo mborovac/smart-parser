@@ -23,5 +23,11 @@ RSpec.describe 'grouper factory' do
       grouper = grouper_factory.create_grouper(group)
       expect(grouper.class).to be SmartLogParser::PageAccessCountGrouper
     end
+
+    it 'when unique page access count grouper is wanted' do
+      group = :UPAC
+      grouper = grouper_factory.create_grouper(group)
+      expect(grouper.class).to be SmartLogParser::UniquePageAccessCountGrouper
+    end
   end
 end
