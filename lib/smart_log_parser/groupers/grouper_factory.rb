@@ -12,6 +12,10 @@ module SmartLogParser
     end
 
     def create_grouper(group)
+      group = group.to_sym
+      raise SmartLogParserException.new("Unknown grouping option #{group}.") unless GROUPER_MAPPER.keys.include?(group)
+
+      GROUPER_MAPPER[group].new(@reader)
     end
   end
 end
